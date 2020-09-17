@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block body %}
+<body class="single-post">
+{% endblock body %}
+
+{% block content %}
+{% for blog in blogs %}
+
+        <!-- Single Content -->
+        <div id="content" class="site-content center-relative">
+            <div class="single-post-wrapper content-1070 center-relative">
+
+                <article class="center-relative">
+                    <h1 class="entry-title">
+                        {{blog.title}}
+                    </h1>
+                    <div class="post-info content-660 center-relative">
+                        <div class="cat-links">
+                            <ul>
+                                <li><a href="#">{{blog.category}}</a></li>
+                            </ul>
+                        </div>
+                        <div class="entry-date published">{{blog.date}}</div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="entry-content">
+                        
+                        <div class="post-full-width">
+                            <script>
+                                var slider1_speed = "500";
+                                var slider1_auto = "true";
+                                var slider1_pagination = "true";
+                                var slider1_hover = "true";
+                            </script>
+                            <div class="image-slider-wrapper">
+                                <div class="caroufredsel_wrapper">
+                                    <ul id="slider1" class="image-slider slides center-text">
+                                        <li><img src="{{blog.image_1.url}}" alt=""></li>
+                                        <li><img src="{{blog.image_2.url}}" alt=""></li>
+                                        <li><img src="{{blog.image_3.url}}" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="slider1_pagination carousel_pagination left"></div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="content-wrap content-660 center-relative">
+                            
+                            {% for content in content_list %}
+                                <p>     {{content}}</p>
+                            {% endfor %}
+                            
+                            <!--<p>{{blog.content|safe}}</p>-->
+                            <br>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="content-wrap content-660 center-relative ">
+                            <img src="{{blog.image_4.url}}" alt="">>
+                            <!--<p>---</p>
+                            <br>
+                            <p class="wrap-blockquote">---</p>>-->
+                            <blockquote class="inline-blockquote">
+                                {% for quote in quote_list %}
+                                    <p>{{quote|safe}}</p>
+                                {% endfor %}
+                            </blockquote>
+                            <!--<p class="wrap-blockquote">---</p>-->
+                            
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </article>
+            </div>
+        </div>
+
+
+{% endfor %}
+        
+{% endblock content %}

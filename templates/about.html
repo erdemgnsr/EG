@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+{% static '' %}
+
+        <!-- About Content -->
+        <div id="content" class="site-content">
+
+            <div class="page-header-image relative">
+                <img src="{% static 'images/kilyoslu-erdem.jpg' %}" alt="About" style = "width: 1500px; height: 800px; object-fit: cover;">
+            </div>
+
+
+            <article>
+                <div class="content-1070 center-relative entry-content">
+                    <div class="content-900 center-relative">
+                        <h1 class="entry-title">Blog Hakkında</h1>
+                        <div class="one_half ">
+                            <p>Bir gün aklıma gelen ani fikirle bu siteyi kurma kararı aldım ve kurdum.</p>
+                            <br>
+                            <p>Bakalım zaman karşımıza ne çıkarıcak.</p>
+                        </div>
+                        <div class="one_half last">
+                            Umarım burada aradığınızı bulursunuz ama ben pek bir şey bulabileceğinizi sanmıyorum :) .<br>
+                        </div>
+                        <div class="clear"></div>
+                        <br>
+                        <br>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="page-full-width ">
+                        <div class="team-holder ">
+                            <div class="member relative one ">
+                                <img src="{% static 'images/pp2.jpg' %}" alt="">
+                                <div class="member-info">
+                                    <div class="member-name">Erdem GÜNEŞER</div>
+                                    <div class="member-position">STUDENT / BLOGGER</div>
+                                    <div class="member-content">
+                                        <p>Merhabalar, ben Erdem GÜNEŞER. Beni tanımanın daha en başında olduğumuz bu noktada sizlere benim hakkında birkaç bilgi edinmeniz, yaptığım projeler ve etkilendiğim makaleler konusunda bilgi vermek için bu sayfayı oluşturdum. İyi eğlenceler :) .</p>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+{% endblock content %}

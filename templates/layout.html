@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+{% load static %}
+
+<html lang="en-US">
+    <head>
+        <title>EG!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Template by Colorlib" />
+        <meta name="keywords" content="HTML, CSS, JavaScript, PHP" />
+        <meta name="author" content="Erdem Güneşer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <link rel="shortcut icon" href="{% static 'images/EG!.ico' %}" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7CLibre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css"  href='{% static "css/clear.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/common.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/font-awesome.min.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/carouFredSel.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "css/sm-clean.css" %}' />
+        <link rel="stylesheet" type="text/css"  href='{% static "style.css" %}' />
+
+        <!--[if lt IE 9]>
+                <script src="{% static "js/html5.js" %}"></script>
+        <![endif]-->
+
+    </head>
+{% block body %}
+    <body class="about page page-template-default">
+{% endblock body %}
+    
+
+        <!-- Preloader Gif -->
+        <table class="doc-loader">
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="{% static 'images/akiskan_logo.gif' %}" alt="Loading...">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Left Sidebar -->
+        <div id="sidebar" class="sidebar">
+            <div class="menu-left-part">
+                <div class="search-holder">
+                    <label>
+                        <input type="search" class="search-field" placeholder="Ara..." value="" name="s" title="Search for:">
+                    </label>
+                </div>
+                <div class="site-info-holder">
+                    <div class="site-title">EG!</div>
+                    <p class="site-description">
+                        Erdem GÜNEŞER'in Bloguna Hoş Geldiniz.
+                    </p>
+                </div>
+                <nav id="header-main-menu">
+                    <ul class="main-menu sm sm-clean">
+                        <li><a href="{% url 'general:index' %}'">Ana Sayfa</a></li>
+                        <li><a href="{% url 'general:about' %}" class="current">Hakkımda</a></li>
+                        <li><a href="{% url 'blog:blogs' %}">Blog</a></li>
+                        <li><a href="{% url 'general:contact' %}">İletişim</a></li>
+                    </ul>
+                </nav>
+                <footer>
+                    <div class="footer-info">
+                        © 2018 SUPPABLOG HTML TEMPLATE. <br> CRAFTED WITH <i class="fa fa-heart"></i> BY <a href="https://colorlib.com">COLORLIB</a>. 
+                    </div>
+                </footer>
+            </div>
+            <div class="menu-right-part">
+                <div class="logo-holder">
+                    <a href="{% url 'general:index' %}">
+                        <img src="{% static 'images/EG!.png' %}" alt="Suppablog WP">
+                    </a>
+                </div>
+                <div class="toggle-holder">
+                    <div id="toggle">
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+                <div class="social-holder">
+                    <div class="social-list">
+                        <a href="https://www.twitter.com/ErdemGuneser"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/erdemgnsr"><i class="fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/eguneser/"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/erdem-güneşer-82717a193"><i class="fa fa-linkedin"></i></a>
+                        <!--<a href="#"><i class="fa fa-behance"></i></a>
+                        <a href="#"><i class="fa fa-rss"></i></a>-->
+                    </div>
+                </div>
+                <div class="fixed scroll-top"><i class="fa fa-caret-square-o-up" aria-hidden="true"></i></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        {% block content %}
+        
+        {% endblock content %}
+
+
+        <!--Load JavaScript-->
+        <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+        <script type='text/javascript' src='{% static "js/imagesloaded.pkgd.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.nicescroll.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.smartmenus.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.carouFredSel-6.0.0-packed.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.mousewheel.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.touchSwipe.min.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/jquery.easing.1.3.js" %}'></script>
+        <script type='text/javascript' src='{% static "js/main.js" %}'></script>
+    </body>
+</html>

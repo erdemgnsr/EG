@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+
+
+        <!-- Contact Content -->
+        <div id="content" class="site-content">
+
+            <div class="page-header-map relative">
+                <img src = "{% static 'images/cogitoergosum.jpg' %}" style = "width: 1500px; height: 500px; object-fit: cover;">
+            
+            
+            <!--  <script>
+                    var lat = "48.87209";
+                    var lng = "2.34791";
+                    var marker_lat = "48.87209";
+                    var marker_lng = "2.34791";
+                    var zoom = 16;
+                </script>
+                <div class="map" id="map"></div>-->
+            </div>
+
+
+            <article>
+                <div class="content-1070 center-relative entry-content">
+                    <div class="content-900 center-relative">
+                        <h1 class="entry-title">İletişim</h1>
+                        <div class="one_half ">
+                            We choose to go to the moon in this decade and do the other things, not because they are easy.<p></p>
+                            <br>
+                            <p>Because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone and one.</p>
+                            <br>
+                            <div class="montserrat">
+                                <span style="color: #adadad;">Address:</span>&nbsp;İstanbul, Türkiye<br>
+                                <span style="color: #adadad;">Phone:</span> +90 530 566 52 60<br>
+                            </div>
+                        </div>
+                        <div class="one_half last ">
+                            <div class="contact-form">
+                                <p><input id="name" type="text" name="your-name" placeholder="İsminiz"></p>
+                                <p><input id="contact-email" type="email" name="your-email" placeholder="E-mail"></p>
+                                <p><input id="subject" type="text" name="your-subject" placeholder="Konu"></p>
+                                <p><textarea id="message" name="your-message" placeholder="Mesajınız"></textarea></p>
+                                <p><input type="submit" onClick="SendMail()" value="SEND"></p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </article>
+
+
+        </div>
+{% endblock content %}
